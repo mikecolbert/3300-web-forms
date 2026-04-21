@@ -4,214 +4,570 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-      }
 
-      form div {
-        margin-bottom: 1rem;
-      }
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
 
-      label {
-        display: inline-block;
-        width: 200px;
-        text-align: right;
-        margin-right: 1rem;
-      }
-
-      input,
-      select {
-        padding: 0.25rem;
-        font-size: 1rem;
-      }
-      fieldset {
-        margin-bottom: 1.5rem;
-        padding: 1rem;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
   </head>
   <body>
-    <main>
-      <h1>Web Forms</h1>
-
-      <form action="#" method="POST">
-        <fieldset>
-          <legend>Personal Information</legend>
-        <div>
-        <label for="cust_id">Customer ID:</label>
-        <input type="text" name="cust_id" id="cust_id" readonly/>
-</div>
-<div>
-        <label for="fname">First Name:</label>
-        <input type="text" name="first_name" id="fname" autofocus  autocomplete="given-name"/>
-</div>
-        <label for="lname">Last Name:</label>
-        <input type="text" name="last_name" id="lname"  autocomplete="family-name"/>
-      </div>
-        <div>
-          <label for="age">Age:</label>
-        <input type="text" name="age" id="age" size="3"  />
-      </div>
-      </fieldset>
-
-<fieldset>
-        <legend>Contact Information</legend>
-      <div>
-          <label for="tel">Telephone:</label>
-        <input type="tel" name="tel" id="tel" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" placeholder="123.123.1212" />
-      </div>
-
-
-
-      <div>
-        <label for="street">Street:</label>
-        <input type="text" name="street" id="street"  />
-      </div>
-      <div>
-        <label for="city">City:</label>
-        <input type="text" name="city" id="city" placeholder="Iowa City"  />
-      </div>
-      <div>
-   <label for="state">State or Territory of Residence:</label>
-  <select id="state" name="state" required>
-    <option value="" select>-- Select a State or Territory --</option>
-    <!-- 50 States -->
-    <option value="AL">Alabama</option>
-    <option value="AK">Alaska</option>
-    <option value="AZ">Arizona</option>
-    <option value="AR">Arkansas</option>
-    <option value="CA">California</option>
-    <option value="CO">Colorado</option>
-    <option value="CT">Connecticut</option>
-    <option value="DE">Delaware</option>
-    <option value="FL">Florida</option>
-    <option value="GA">Georgia</option>
-    <option value="HI">Hawaii</option>
-    <option value="ID">Idaho</option>
-    <option value="IL">Illinois</option>
-    <option value="IN">Indiana</option>
-    <option value="IA">Iowa</option>
-    <option value="KS">Kansas</option>
-    <option value="KY">Kentucky</option>
-    <option value="LA">Louisiana</option>
-    <option value="ME">Maine</option>
-    <option value="MD">Maryland</option>
-    <option value="MA">Massachusetts</option>
-    <option value="MI">Michigan</option>
-    <option value="MN">Minnesota</option>
-    <option value="MS">Mississippi</option>
-    <option value="MO">Missouri</option>
-    <option value="MT">Montana</option>
-    <option value="NE">Nebraska</option>
-    <option value="NV">Nevada</option>
-    <option value="NH">New Hampshire</option>
-    <option value="NJ">New Jersey</option>
-    <option value="NM">New Mexico</option>
-    <option value="NY">New York</option>
-    <option value="NC">North Carolina</option>
-    <option value="ND">North Dakota</option>
-    <option value="OH">Ohio</option>
-    <option value="OK">Oklahoma</option>
-    <option value="OR">Oregon</option>
-    <option value="PA">Pennsylvania</option>
-    <option value="RI">Rhode Island</option>
-    <option value="SC">South Carolina</option>
-    <option value="SD">South Dakota</option>
-    <option value="TN">Tennessee</option>
-    <option value="TX">Texas</option>
-    <option value="UT">Utah</option>
-    <option value="VT">Vermont</option>
-    <option value="VA">Virginia</option>
-    <option value="WA">Washington</option>
-    <option value="WV">West Virginia</option>
-    <option value="WI">Wisconsin</option>
-    <option value="WY">Wyoming</option>
-
-    <!-- Washington, D.C. -->
-    <option value="DC">District of Columbia</option>
-
-    <!-- U.S. Territories -->
-    <option value="AS">American Samoa</option>
-    <option value="GU">Guam</option>
-    <option value="MP">Northern Mariana Islands</option>
-    <option value="PR">Puerto Rico</option>
-    <option value="VI">U.S. Virgin Islands</option>
-  </select>
-      </div>
-      <div>
-        <label for="zip">ZIP Code:</label>
-        <input type="text" name="zip" id="zip" pattern="^\d{5}(-\d{4})?$"  />
-      </div>
-</fieldset> 
-
-
-      <div>
-        <fieldset>
-            <legend>Preferences</legend>
-        <label for="ice-cream"> Favorite flavor of ice cream: </label>
-            <select name="ice-cream" id="ice-cream" required>
-                <option value="" selected> Choose one ... </option>
-             
-                <option value="vanilla"> Vanilla </option>
-                <option value="chocolate"> Chocolate </option>
-                <option value="swirl"> Swirl </option>
-            </select>    
-            </fieldset> 
-      </div>
-     
-      <div>
-
-    <fieldset>
-      <legend>Gender</legend>
-        <label for="female">Female</label>
-    <input type="radio" id="female" name="gender" value="female">
-
-<label for="male">Male </label>
-    <input type="radio" id="male" name="gender" value="male">
-
-      <label for="non-binary">Non-binary</label>
-      <input type="radio" id="non-binary" name="gender" value="non-binary">
-    </fieldset>
-
-      </div>
-<div>
-    <fieldset>
-        <legend>Grade Level</legend>
-        <label for="freshman">Freshman</label>
-    <input type="radio" id="freshman" name="grade" value="freshman" required>
-
-<label for="sophomore">Sophomore</label>
-    <input type="radio" id="sophomore" name="grade" value="sophomore">
-
-<label for="junior">Junior</label>
-    <input type="radio" id="junior" name="grade" value="junior">
-
-<label for="senior">Senior</label>
-<input type="radio" id="senior" name="grade" value="senior">
-
-</div>
-<div>
-    <fieldset>
-      <legend>Physical Activities</legend>
-    <label for="running">Running</label>
-      <input type="checkbox" id="running" name="activities" value ="running" required> 
-
-    <label for="biking">Biking</label>
-      <input type="checkbox" id="biking" name="activities" value="biking">
-
-    <label for="reading">Reading</label>
-      <input type="checkbox" id="reading" name="activities" value="reading">
-      </fieldset>
-</div>
-
-        <div>
-        <button type="submit">Submit</button>
-        <button type="reset">Clear form</button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a href="/" class="navbar-brand">Brand</a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav">
+            <a href="#home" class="nav-item nav-link active">Home</a>
+            <a href="#profile" class="nav-item nav-link">Profile</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Messages</a
+              >
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Inbox</a>
+                <a href="#" class="dropdown-item">Sent</a>
+                <a href="#" class="dropdown-item">Drafts</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </nav>
+    <main class="container">
+      <h1>Web Forms</h1>
+      <form action="#" method="POST">
+        <fieldset class="mb-5">
+          <legend>Personal Information</legend>
+          <div class="mb-3">
+            <label for="cust_id" class="form-label">Customer ID:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="cust_id"
+              id="cust_id"
+              value="mike.colbert"
+              readonly
+            />
+          </div>
+          <div class="row">
+            <!-- to shorten textbox width, wrap in row -->
+            <div class="mb-3 col-md-4">
+              <!-- then use a column width class -->
+              <label for="fname" class="form-label">First Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                name="first_name"
+                id="fname"
+                size="40"
+                autofocus
+                autocomplete="given-name"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="lname" class="form-label">Last Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="last_name"
+              id="lname"
+              autocomplete="family-name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="age" class="form-label">Age:</label>
+            <input type="text" class="form-control" name="age" id="age" />
+          </div>
+          <fieldset class="mb-3">
+            <legend>Sex</legend>
+            <div class="form-check">
+              <label for="female" class="form-check-label">Female</label>
+              <input
+                type="radio"
+                class="form-check-input"
+                id="female"
+                name="sex"
+                value="female"
+              />
+            </div>
+            <div class="form-check">
+              <label for="male" class="form-check-label">Male </label>
+              <input
+                type="radio"
+                id="male"
+                class="form-check-input"
+                name="sex"
+                value="male"
+              />
+            </div>
+            <div class="form-check">
+              <label for="intersex" class="form-check-label">Intersex</label>
+              <input
+                type="radio"
+                id="intersex"
+                class="form-check-input"
+                name="sex"
+                value="intersex"
+              />
+            </div>
+            <div class="form-check">
+              <label for="decline_sex" class="form-check-label"
+                >Decline to answer</label
+              >
+              <input
+                type="radio"
+                id="decline_sex"
+                class="form-check-input"
+                name="sex"
+                value="decline_sex"
+              />
+            </div>
+          </fieldset>
 
+          <fieldset class="mb-3">
+            <legend>Gender</legend>
+            <div class="form-check">
+              <label for="male" class="form-check-label">Man</label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="male"
+                name="gender"
+                value="male"
+              />
+            </div>
+            <div class="form-check">
+              <label for="female" class="form-check-label">Woman</label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="female"
+                name="gender"
+                value="female"
+              />
+            </div>
+            <div class="form-check">
+              <label for="trans-man" class="form-check-label">Trans Man</label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="trans-man"
+                name="gender"
+                value="trans-man"
+              />
+            </div>
+
+            <div class="form-check">
+              <label for="trans-woman" class="form-check-label"
+                >Trans Woman</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="trans-woman"
+                name="gender"
+                value="trans-woman"
+              />
+            </div>
+            <div class="form-check">
+              <label for="gender-queer" class="form-check-label"
+                >Gender Queer</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="gender-queer"
+                name="gender"
+                value="gender-queer"
+              />
+            </div>
+            <div class="form-check">
+              <label for="gender-non-conforming" class="form-check-label"
+                >Gender Non-Conforming</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="gender-non-conforming"
+                name="gender"
+                value="gender-non-conforming"
+              />
+            </div>
+            <div class="form-check">
+              <label for="non-binary" class="form-check-label"
+                >Non-Binary</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="non-binary"
+                name="gender"
+                value="non-binary"
+              />
+            </div>
+            <div class="form-check">
+              <label for="multi-gender" class="form-check-label"
+                >Multi-Gender</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="multi-gender"
+                name="gender"
+                value="multi-gender"
+              />
+            </div>
+            <div class="form-check">
+              <label for="decline_gender" class="form-check-label"
+                >Decline to answer</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="decline_gender"
+                name="gender"
+                value="decline_gender"
+              />
+            </div>
+          </fieldset>
+          <fieldset class="mb-3">
+            <legend>Ethnicity</legend>
+            <div class="form-check">
+              <label for="hispanic_latino" class="form-check-label"
+                >Hispanic or Latino</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="hispanic_latino"
+                name="ethnicity"
+                value="hispanic_latino"
+              />
+            </div>
+            <div class="form-check">
+              <label for="not_hispanic_latino" class="form-check-label"
+                >Not Hispanic or Latino</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="not_hispanic_latino"
+                name="ethnicity"
+                value="not_hispanic_latino"
+              />
+            </div>
+          </fieldset>
+          <fieldset class="mb-3">
+            <legend>Race</legend>
+            <div class="form-check">
+              <label
+                for="american_indian_alaskan_native"
+                class="form-check-label"
+                >American Indian or Alaskan Native</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="american_indian_alaskan_native"
+                name="race"
+                value="american_indian_alaskan_native"
+              />
+            </div>
+            <div class="form-check">
+              <label for="asian" class="form-check-label">Asian</label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="asian"
+                name="race"
+                value="asian"
+              />
+            </div>
+            <div class="form-check">
+              <label for="black_african_american" class="form-check-label"
+                >Black or African American</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="black_african_american"
+                name="race"
+                value="black_african_american"
+              />
+            </div>
+            <div class="form-check">
+              <label
+                for="native_hawaiian_pacific_islander"
+                class="form-check-label"
+                >Native Hawaiian or Other Pacific Islander</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="native_hawaiian_pacific_islander"
+                name="race"
+                value="native_hawaiian_pacific_islander"
+              />
+            </div>
+            <div class="form-check">
+              <label for="white" class="form-check-label">White</label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="white"
+                name="race"
+                value="white"
+              />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Grade Level</legend>
+            <div class="form-check">
+              <label for="freshman" class="form-check-label">Freshman</label>
+              <input
+                type="radio"
+                id="freshman"
+                name="grade"
+                value="freshman"
+                class="form-check-input"
+                required
+              />
+            </div>
+            <div class="form-check">
+              <label for="sophomore" class="form-check-label">Sophomore</label>
+              <input
+                type="radio"
+                id="sophomore"
+                name="grade"
+                value="sophomore"
+                class="form-check-input"
+              />
+            </div>
+
+            <div class="form-check">
+              <label for="junior" class="form-check-label">Junior</label>
+              <input
+                type="radio"
+                id="junior"
+                name="grade"
+                value="junior"
+                class="form-check-input"
+              />
+            </div>
+            <div class="form-check">
+              <label for="senior" class="form-check-label">Senior</label>
+              <input
+                type="radio"
+                id="senior"
+                name="grade"
+                value="senior"
+                class="form-check-input"
+              />
+            </div>
+          </fieldset>
+        </fieldset>
+        <fieldset class="mb-5">
+          <legend>Contact Information</legend>
+
+          <div class="mb-3">
+            <label for="tel" class="form-label">Telephone:</label>
+            <input
+              type="tel"
+              class="form-control"
+              name="tel"
+              id="tel"
+              pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
+              placeholder="123.123.1212"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="street" class="form-label">Street:</label>
+            <input type="text" class="form-control" name="street" id="street" />
+          </div>
+          <div class="mb-3">
+            <label for="city" class="form-label">City:</label>
+            <input type="text" class="form-control" name="city" id="city" />
+          </div>
+
+          <div class="mb-3">
+            <label for="state" class="form-label"
+              >State or Territory of Residence:</label
+            >
+            <select
+              id="state"
+              class="form-select"
+              aria-label="Select state or territory"
+              name="state"
+              required
+            >
+              <option value="" select>-- Select a State or Territory --</option>
+              <!-- 50 States -->
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+
+              <!-- Washington, D.C. -->
+              <option value="DC">District of Columbia</option>
+
+              <!-- U.S. Territories -->
+              <option value="AS">American Samoa</option>
+              <option value="GU">Guam</option>
+              <option value="MP">Northern Mariana Islands</option>
+              <option value="PR">Puerto Rico</option>
+              <option value="VI">U.S. Virgin Islands</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="zip" class="form-label">ZIP Code:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="zip"
+              id="zip"
+              pattern="^\d{5}(-\d{4})?$"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset class="mb-3">
+          <legend>Ice Cream Preference</legend>
+          <div class="mb-3">
+            <label class="form-label" for="ice-cream">
+              Favorite flavor of ice cream:
+            </label>
+            <select
+              name="ice-cream"
+              id="ice-cream"
+              class="form-select"
+              required
+            >
+              <option value="" selected>Choose one ...</option>
+
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="swirl">Swirl</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="mb-3">
+          <legend>Physical Activity Preference</legend>
+          <div class="form-check">
+            <label for="running" class="form-check-label">Running</label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="running"
+              name="activities"
+              value="running"
+              required
+            />
+          </div>
+          <div class="form-check">
+            <label for="biking" class="form-check-label">Biking</label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="biking"
+              name="activities"
+              value="biking"
+            />
+          </div>
+          <div class="form-check">
+            <label for="reading" class="form-check-label">Reading</label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="reading"
+              name="activities"
+              value="reading"
+            />
+          </div>
+        </fieldset>
+        <div class="mt-3">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn btn-warning">Clear form</button>
+        </div>
       </form>
     </main>
+
+    <!-- Separate Popper and Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
